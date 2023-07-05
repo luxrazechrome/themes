@@ -32,31 +32,50 @@ NNNNNNNN         NNNNNNN   ooooooooooo       cccccccccccccccc          ttttttttt
 */
 @import url("https://xcruxiex.github.io/themes/core/badges.css");
 @import url("https://xcruxiex.github.io/themes/core/custom-font.css");
-@import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css"); /* Radial Status */
+@import url('https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css'); /* Radial Status */
 :root {
-  --backgroundColor01: #1e2731;
-  --backgroundColor02: #12171d;
+  --backgroundColor01: #141522;
+  --backgroundColor02: #0a0b13;
   --mainColor: #2275c9;
-  --gradientColor01: #00F260;
+  --gradientColor01: #3edbf0;
   --gradientColor02: #0575E6;
 
   /* Better Hljs */
-  --backgroundCode: #1e2731;
-  --backgroundName: rgba(0, 0, 0, .2);
+  --backgroundCode: #141522;
+  --backgroundName: rgba(0, 0, 0, 0.2);
 
   /* Radial Status */
-  --rs-small-spacing: 2px;
-  --rs-large-spacing: 3px;
-  --rs-width: 2px;
-  --rs-avatar-shape: 50%;
-  --rs-online-color: #43b581;
-  --rs-idle-color: #faa61a;
-  --rs-dnd-color: #f04747;
-  --rs-offline-color: #636b75;
-  --rs-streaming-color: #643da7;
-  --rs-invisible-color: #747f8d;
-  --rs-phone-visible: block;
-  --rs-phone-color: var(--rs-online-color);
+  --rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
+  --rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
+  --rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
+
+  --rs-small-width: 2px; /* Thickness of status border for members list/dms | MUST end in px */
+  --rs-medium-width: 3px; /* Thickness of status border for User popout | MUST end in px */
+  --rs-large-width: 4px; /* Thickness of status border for User profile | MUST end in px */
+
+  --rs-avatar-shape: 50%; /* 50% for round - 0% for square */
+
+  --rs-online-color: #43b581; /* Colour for online status */
+  --rs-idle-color: #faa61a; /* Colour for idle status */
+  --rs-dnd-color: #f04747; /* Colour for dnd status */
+  --rs-offline-color: #636b75; /* Colour for offline status */
+  --rs-streaming-color: #643da7; /* Colour for streaming status */
+  --rs-invisible-color: #747f8d; /* Colour for invisible status - Note: this will only show for your own invisibility */
+  --rs-phone-color: var(--rs-online-color); /* Colour of the ring and phone icon when a user is on their phone |  */
+
+  --rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
 
   --customFont: 'gg sans', sans-serif;
+}
+
+/* Disable Blinking in unread channels */
+#app-mount .unread-36eUEm {
+       height: 8px;
+       width: 4px;
+       border-radius: 0 4px 4px 0;
+       left: 0;
+       background-color: #fff;
+}
+#app-mount .unread-36eUEm:after {
+       content: none !important;
 }
